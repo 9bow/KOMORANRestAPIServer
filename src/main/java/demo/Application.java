@@ -11,8 +11,8 @@ public class Application {
 	public static void main(String[] args) {
 		port(8080);
 
-		get("/demo", (req, res) -> {
-			String query = req.queryParams("sentence") == null ? "바람과 함께 사라지다를 봤어." : req.queryParams("sentence");
+		get("/api", (req, res) -> {
+			String query = req.queryParams("query") == null ? "바람과 함께 사라지다를 봤어." : req.queryParams("sentence");
 			String modelType = req.queryParams("model_type") == null ? "full" : req.queryParams("model_type");
 
 			komoran.setUserInput(query, modelType);

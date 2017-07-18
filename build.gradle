@@ -1,51 +1,21 @@
-buildscript {
-	ext {
-		springBootVersion = '1.5.3.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
-}
+group 'ninebow'
+version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'eclipse-wtp'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'war'
+apply plugin: 'application'
 
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+
+mainClassName = "demo.Application"
 
 repositories {
 	mavenCentral()
 	jcenter()
 	maven { url "https://jitpack.io" }
-	
-}
-
-configurations {
-	providedRuntime
 }
 
 dependencies {
-	// originally from KOMORAN
-	compile 'com.github.shineware:commons:1.0.0'
-	compile 'com.github.shineware:aho-corasick:1.0.8'
-	compile 'com.github.shin285:KOMORAN:3.3.0'
-	compile 'org.slf4j:slf4j-api:1.7.13'
-	testCompile 'junit:junit:4.12'
-
-	// originally from Spring-boot
-	compile('org.springframework.boot:spring-boot-starter-jersey')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-}
-
-// for production env.
-// via http://stackoverflow.com/questions/22886083/how-do-i-run-a-spring-boot-executable-jar-in-a-production-environment 
-springBoot {
-    executable = true
+	compile 'com.sparkjava:spark-core:2.6.0'
+	compile 'com.github.shin285:KOMORAN:3.3.2'
+	compile 'com.google.code.gson:gson:2.8.1'
 }

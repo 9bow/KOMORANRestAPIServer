@@ -1,11 +1,11 @@
 # 소개
 * `KOMORANRestAPIServer`는 [KOMORAN 3.0](https://github.com/shin285/KOMORAN) 의 간단한 RESTful API Server입니다.<br />
-* [Spring Boot](http://projects.spring.io/spring-boot/) 기반으로 제작하였습니다.<br />
+* [Spark Framework](http://sparkjava.com/) 기반으로 제작하였습니다.<br />
 
 # 빠른 실행
 * `git clone` 후, 다음의 명령어를 이용하여 실행합니다.
 ```shell
-./gradlew bootRun
+./gradlew run
 ```
 
 # 간단한 사용법

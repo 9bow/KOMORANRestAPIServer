@@ -16,6 +16,6 @@ repositories {
 
 dependencies {
 	compile 'com.sparkjava:spark-core:2.6.0'
-	compile 'com.github.shin285:KOMORAN:3.3.2'
+	compile 'com.github.shin285:KOMORAN:3.3.4'
 	compile 'com.google.code.gson:gson:2.8.1'
 }
